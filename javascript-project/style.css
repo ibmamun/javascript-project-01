@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #222;
+    font-family: "Poppins", sans-serif;
+}
+
+/* to-do-list */
+.to-do-list-wrap {
+    width: 90%;
+    max-width: 479px;
+    background: linear-gradient(135deg, #20906a, #1c0f79);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.to-do-list-wrap .title {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+#task-form {
+    width: 100%;
+    position: relative;
+}
+#task-form input {
+    width: 100%;
+    border: none;
+    background: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    padding: 10px 101px 10px 20px;
+    height: 50px;
+}
+#task-form input:focus {
+    outline: none;
+}
+#task-form input::placeholder {
+    font-size: 16px;
+    line-height: 1;
+    color: #666;
+    font-weight: 400;
+}
+#task-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    font-weight: 700;
+    background: #21bcbf;
+    border-radius: 30px;
+    border: none;
+    padding: 13px 30px;
+    color: #fff;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+#task-form button:hover {
+    background: #000;
+}
+#task-list li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 20px 0;
+    gap: 10px;
+}
+#task-list li:first-child {
+    margin-top: 30px;
+}
+#task-list li:last-child {
+    margin-bottom: 0;
+}
+#task-list li.complete .taskContent {
+    text-decoration: line-through;
+    opacity: .7;
+}
+.taskContent {
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.taskAction {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+.taskAction button {
+    font-size: 14px;
+    background: #21bcbf;
+    border: none;
+    color: #fff;
+    padding: 10px 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s linear;
+    border-radius: 10px;
+}
+.taskAction button:hover {
+    background: #000;
+}
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+/* weather */
+.weather__box {
+    width: 90%;
+    max-width: 479px;
+    background: linear-gradient(135deg, #20906a, #1c0f79);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.weather__box .title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.search__wrap {
+    width: 100%;
+    position: relative;
+}
+.search__wrap input {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 58px 16px 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    background: #fff;
+}
+.search__wrap input:focus {
+    outline: none;
+}
+.search__wrap input::placeholder {
+    font-size: 16px;
+    line-height: 1;
+    color: #666;
+    font-weight: 400;
+}
+.search__wrap button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    cursor: pointer;
+    transition: .3s linear;
+    background: #21bcbf;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.search__wrap button:hover {
+    background: #222;
+    color: #fff;
+}
+
+.weather__icon-wrap {
+    font-size: 170px;
+    margin-top: 50px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.weather__info h1 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.weather__info h2 {
+    font-size:45px;
+    font-weight: 600;
+}
+.weather__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+    margin-top: 50px;
+}
+.weather__details {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.wind__wrap,
+.humidity__wrap {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.wind__wrap i,
+.humidity__wrap i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+.wind__wrap span,
+.humidity__wrap span {
+    display: block;
+}
+.humidity,
+.wind {
+    font-size: 28px;
+    margin-top: -6px;
+    display: block;
+    line-height: 1.2;
+}
+
+.weather__info {
+    display: none;
+}
+.error__message {
+    margin-top: 20px;
+    display: none;
+}
+.error__message p {
+    color: #fff;
+    font-size: 16px;
+}
